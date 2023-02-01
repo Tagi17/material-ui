@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import React from 'react';
 import { Stack } from '@mui/material';
-import ceateTheme from "./theme";
+import createTheme from './theme';
 import { purple } from '@mui/material/colors';
 import theme from './theme'
 import useStyles from './styles';
