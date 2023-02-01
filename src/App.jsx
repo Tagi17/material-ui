@@ -1,19 +1,12 @@
-import React from 'react';
+import { AppBar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, CssBaseline, Grid, Spacing, Toolbar, Typography } from '@material-ui/core'; //components u will import from material UI
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { Typography, AppBar, Box, Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container, Spacing} from '@material-ui/core'; //components u will import from material UI
-import useStyles from './styles';
-import { purple } from '@mui/material/colors';
+
+import React from 'react';
 import { Stack } from '@mui/material';
-import customtheme from "./theme";
-
-const darkTheme = createTheme({
-    palette: {
-        primary: {
-            main: '#3500D3'
-    },
-    secondary: purple
-  }});
-
+import ceateTheme from "./theme";
+import { purple } from '@mui/material/colors';
+import theme from './theme'
+import useStyles from './styles';
 
 const cards = [ 1,2,3,4,5,6,7,8,9]
 
@@ -22,9 +15,10 @@ const App = () => {
     const classes = useStyles(); //call useStyles as a function from styles.js
     return (
         <>
-        <ThemeProvider theme={customtheme}>
+        <ThemeProvider theme={createTheme}>
             <CssBaseline />
-            <AppBar position="sticky" >
+
+            <AppBar sx={{ bgcolor: "green" }} position="sticky">
                 <Toolbar sx={{
                     backgroundColor: "red",
                 }}
