@@ -1,28 +1,39 @@
 import { AppBar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, CssBaseline, Grid, Spacing, Toolbar, Typography } from '@material-ui/core'; //components u will import from material UI
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { green, purple } from '@mui/material/colors';
 
 import React from 'react';
 import { Stack } from '@mui/material';
-import createTheme from './theme';
-import { purple } from '@mui/material/colors';
-import theme from './theme'
 import useStyles from './styles';
 
 const cards = [ 1,2,3,4,5,6,7,8,9]
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: green[300],
+        dark: green[500]
+      },
+      secondary: {
+        main: purple[600],
+        dark: purple[800]
+      },
+      primaryLight: {
+        main: green[50],
+        contrastText: "#616161"
+      }
+    }
+  });
 
 //create functional component
 const App = () => {
     const classes = useStyles(); //call useStyles as a function from styles.js
     return (
         <>
-        <ThemeProvider theme={createTheme}>
-            <CssBaseline />
-
-            <AppBar sx={{ bgcolor: "green" }} position="sticky">
-                <Toolbar sx={{
-                    backgroundColor: "red",
-                }}
-                >
+        <CssBaseline />
+        <ThemeProvider theme={theme}>
+            <AppBar position="sticky" color= "primaryLight">
+                <Toolbar >
                     <div className={classes.buttons}>
                         <Stack spacing={2}  sx={{ flexGrow: 1 }}>
                         <Button color="inherit" size="large" variant="text">ART</Button>
