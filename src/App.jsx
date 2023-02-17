@@ -6,6 +6,7 @@ import { green, purple } from '@mui/material/colors';
 import About from "./components/About";
 import Art from './components/Art';
 import Articles from "./components/Articles";
+import Home from "./components/Home";
 import Projects from "./components/Projects";
 import React from 'react';
 import ResponsiveAppBar from './components/navbar';
@@ -13,7 +14,6 @@ import useStyles from './components/styles';
 
 const RouterLink = ["Art, Articles, Projects, About"] //associate a link to each of the pages 
 
-const cards = [ 1,2,3,4,5,6,7,8,9]
 
 const theme = createTheme({
   palette: {
@@ -35,69 +35,37 @@ const App = () => {
         <>
         <CssBaseline />
         <ThemeProvider theme={theme}>
-        <BrowserRouter>
-            <ResponsiveAppBar/>
+        <ResponsiveAppBar/>
+       <nav>
+       <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+       </ul>
+       <ul>
+          <li>
+            <Link to="/Art">Art</Link>
+          </li>
+       </ul>
+       <ul>
+          <li>
+            <Link to="/Projects">Projects</Link>
+          </li>
+       </ul>
+       <ul>
+          <li>
+            <Link to="/About">About</Link>
+          </li>
+       </ul>
+       </nav>
             <Routes>
-                <Route path="Art" element={<Art/>}></Route>
-                <Route path="Articles" element={<Articles/>}></Route>
-                <Route path="Projects" element={<Projects/>}></Route>
-                <Route path="About" element={<About/>}></Route>
+              <Route path="/" element={<Home/>} />
+              <Route path="/Art" element={<Art/>} />
+              <Route path="/Articles" element={<Articles/>} />
+              <Route path="/Projects" element={<Projects/>} />
+              <Route path="/About" element={<About/>} /> 
             </Routes>
-            </BrowserRouter>
-            <main>
-                <div className={classes.container}  style={{background:'#ffffff'}}>
-                    <Container maxWidth="sm" style={{ marginTop: '100px', background:'#ffffff'}} >
-                        <Typography variant="h2" aligned="center" color="textPrimary" gutterBottom> 
-                            NFT Collection
-                        </Typography>
-                        <Typography variant="h5" aligned="center" color="textSecondary" paragraph>
-                            All made by @Inzhagi
-                        </Typography>
-                        <div className={classes.button}>
-                            <Grid container spacing={2} justifyContent="center" style={{background:'#ffffff'}}>
-                                <Grid item >
-                                    <Button variant="contained" color="secondary">
-                                        See my photos
-                                    </Button>
-                                </Grid>
-                                <Grid item>
-                                    <Button variant="outlined" color="secondary">
-                                        Secondary Action
-                                    </Button>
-                                </Grid>
-                            </Grid>
-                        </div>
-                    </Container>
-                </div>
-                <Container className={classes.cardGrid} style={{background:'#ffffff'}} maxWidth="md">
-                    <Grid container spacing={4} style={{background:'#ffffff'}} >
-                        {cards.map((card) => (
-                             <Grid item key={card} xs={12} sm={6} md={4} style={{background:'#ffffff'}} >
-                                <Card className={classes.card} style={{background:'#ffffff'}} >
-                                    <CardMedia
-                                        className={classes.cardMedia}
-                                        image ={require('./glow.png')}
-                                        title="Image title"
-                                        
-                                    />
-                                    <CardContent className={classes.CardContent} style={{background:'#ffffff'}} >
-                                        <Typography gutterBottom variant="h5">
-                                            Sprite
-                                        </Typography>  
-                                        <Typography> 
-                                            This is an avatar  
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small" color="secondary"> View </Button>
-                                        <Button size="small" color="secondary"> Edit </Button>
-                                    </CardActions>
-                                </Card>
-                            </Grid>
-                        ))}                
-                    </Grid>
-                </Container>
-            </main>
+
             <footer className={classes.footer}>
                 <Typography variant="h6" align="center" gutterBottom>
                     Contact Me
