@@ -1,48 +1,45 @@
-import { AppBar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, CssBaseline, Grid, Spacing, Toolbar, Typography } from '@material-ui/core'; //components u will import from material UI
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
-import { MemoryRouter, Link as RouterLink } from 'react-router-dom';
+import { AppBar, Button, Stack, Toolbar } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
 
-import About from "./About";
-import Art from "./Art";
-import Articles from "./Articles";
-import { NavLink } from "react-router-dom";
-import Projects from "./Projects";
-import PropTypes from 'prop-types';
-import React from 'react';
-import Stack from '@mui/material/Stack';
-import { StaticRouter } from 'react-router-dom/server';
 import useStyles from './styles';
 
 const ResponsiveAppBar = () => {
-    const classes = useStyles(); //call useStyles as a function from styles.js
-    return (
-        <>
-        <BrowserRouter>
-            <AppBar position="sticky" color="primary">
-                <Toolbar >
-                    <div className={classes.buttons}>
-                        <Link to="/Art" className="navlink">
-                        <Stack spacing={2}  sx={{ flexGrow: 1 }}>
-                        <Button color="inherit" size="large" variant="text">ART</Button>
-                        </Stack>
-                        </Link>  
-                        <Stack spacing={2}  sx={{ flexGrow: 1 }}>
-                        <Link to="/Articles" className="navlink">
-                        <Button size="large" variant="text">ARTICLES</Button>
-                        </Link>
-                        </Stack>
-                        <Link to="/Projects" className="navlink">
-                        <Button size="large" variant="text">PROJECTS</Button>
-                        </Link>
-                        <Link to="/About" className="navlink">
-                        <Button size="large" variant="text"> ABOUT</Button>
-                        </Link>
-                    </div>
+  const classes = useStyles();
+  const navigate = useNavigate();
 
-                 </Toolbar>
-            </AppBar>
-        </BrowserRouter>
-        </>
-    );
-}
+  const handleClickArt = () => navigate('/Art');
+  const handleClickArticles = () => navigate('/Articles');
+  const handleClickProjects = () => navigate('/Projects');
+  const handleClickAbout = () => navigate('/About');
+
+  return (
+    <AppBar position="sticky" color="primary">
+      <Toolbar>
+        <div className={classes.buttons}>
+          <Stack spacing={2} sx={{ flexGrow: 1 }}>
+            <Button onClick={handleClickArt}>
+              ART
+              <Link to="/Art">Art</Link>
+            </Button>
+          </Stack>
+          <Stack spacing={2} sx={{ flexGrow: 1 }}>
+            <Button size="large" variant="text" onClick={handleClickArticles}>
+              Articles
+              <Link to="/Articles">Articles</Link>
+            </Button>
+          </Stack>
+          <Button size="large" variant="text" onClick={handleClickProjects}>
+            Projects
+            <Link to="/Projects">Projects</Link>
+          </Button>
+          <Button size="large" variant="text" onClick={handleClickAbout}>
+            About
+            <Link to="/About">About</Link>
+          </Button>
+        </div>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
 export default ResponsiveAppBar;

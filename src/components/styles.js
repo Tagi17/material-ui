@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 //create a hook
 //open new objects for the classNames we created in the App.jsx file and add specific styles we want
 const useStyles = makeStyles((theme) => ({
+
     container:{
         backgroundColor: theme.palette.background.paper,
         padding: theme.spacing(8, 0, 6),
@@ -33,14 +34,30 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding: '50px 0',
-    }
-
+        bottom: 0,
+        left: 0,
+        right: 0,
+        height: '50px',
+        backgroundColor: '#f5f5f5',
+        padding: '10px',
+    },
+    homepageBackground: {
+        backgroundColor: 'black',
+    },
+    googleFont: {
+        fontFamily: 'VT323 monospace', // use the font family name you got from Google Fonts
+    },
+    myText:{
+        fontFamily: 'VT323',
+        fontSize: '2rem',
+    },
+    text: {
+        zIndex: 1,
+        primary: '#ffffff',
+        secondary: 'blue',
+    },
 }));
 
 //use classNames u want to style 
 export default useStyles;
-
-//add this to a custom theme file
 
