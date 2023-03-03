@@ -16,9 +16,9 @@ It contains a navbar, routing, buttons, cards, useStyles, etc.
 
 Follow the steps
 
-###npm install npm@latest -g
+```npm install npm@latest -g```
 
-###npm install @mui/material @emotion/react @emotion/styled
+```npm install @mui/material @emotion/react @emotion/styled```
 
 Clone the repo:
 
