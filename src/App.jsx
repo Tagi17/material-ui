@@ -20,7 +20,7 @@ const App = () => {
         <>
         <CssBaseline  />
         <ThemeProvider theme={theme}>
-        <ResponsiveAppBar/>
+        <ResponsiveAppBar />
         <div style={{ position: "relative" }}>
             <Routes>
               <Route path="/" element={<Home/>} />

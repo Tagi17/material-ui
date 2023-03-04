@@ -43,8 +43,7 @@ const Art = () => {
                             <CardMedia
                                 className={classes.cardMedia}
                                 image ={require('./glow.png')}
-                                title="Image title"
-                                
+                                title="Image title" 
                             />
                             <CardContent className={classes.CardContent} style={{background:'#ffffff'}} >
                                 <Typography gutterBottom variant="h5">

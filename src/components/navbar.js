@@ -1,6 +1,7 @@
-import { AppBar, Button, Stack, Toolbar } from '@mui/material';
+import { AppBar, Box, Button, Stack, Toolbar, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
+import enhexport from "./enhexport.png"
 import useStyles from './styles';
 
 const ResponsiveAppBar = () => {
@@ -11,31 +12,39 @@ const ResponsiveAppBar = () => {
   const handleClickArticles = () => navigate('/Articles');
   const handleClickProjects = () => navigate('/Projects');
   const handleClickAbout = () => navigate('/About');
-
+  const handleClickHome = () => navigate('/Home');
+  
   return (
     <AppBar position="sticky" color="primary">
-      <Toolbar>
-        <div className={classes.buttons}>
-          <Stack spacing={2} sx={{ flexGrow: 1 }}>
-            <Button onClick={handleClickArt}>
-              ART
-              <Link to="/Art">Art</Link>
-            </Button>
-          </Stack>
-          <Stack spacing={2} sx={{ flexGrow: 1 }}>
-            <Button size="large" variant="text" onClick={handleClickArticles}>
-              Articles
-              <Link to="/Articles">Articles</Link>
-            </Button>
-          </Stack>
+        <Toolbar >
+        <Box sx={{ display: 'flex', alignItems: 'center'}}>
+        <Link to="/Home" onClick={handleClickHome}>
+          <img src={enhexport} alt="Logo" sx={{marginRight: 1}}/>
+        </Link>
+        </Box>
+        <div className={classes.buttons} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+        <Stack direction="row" spacing={4} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Button size="large" variant="text" onClick={handleClickArt} sx={{ textDecoration: 'none', borderBottom: 'none'}}>
+            <Link to="/Art" style={{ textDecoration: 'none'}}>
+            <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>Art</Typography>
+            </Link>
+          </Button>
+          <Button size="large" variant="text" onClick={handleClickArticles}>
+            <Link to="/Articles" style={{ textDecoration: 'none'}} >
+            <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>Articles</Typography>
+            </Link>
+          </Button>
           <Button size="large" variant="text" onClick={handleClickProjects}>
-            Projects
-            <Link to="/Projects">Projects</Link>
+            <Link to="/Projects" style={{ textDecoration: 'none'}} >
+            <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>Projects</Typography>
+            </Link>
           </Button>
           <Button size="large" variant="text" onClick={handleClickAbout}>
-            About
-            <Link to="/About">About</Link>
+            <Link to="/About" style={{ textDecoration: 'none'}} >
+            <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>About</Typography>
+            </Link >
           </Button>
+          </Stack>
         </div>
       </Toolbar>
     </AppBar>

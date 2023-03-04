@@ -10,13 +10,26 @@ const useStyles = makeStyles((theme) => ({
     },
     buttons:{
         size:"large",
-        justifyContent:"flex-end",
+        justifyContent:"center",
         display: 'flex',
         flex: 1,
         padding: '30px 0',
+        marginLeft: '1rem', 
+        marginRight: '1rem',
+        color: '#ffffff',
+        textDecoration: 'none',
+        "& button:hover": {
+            backgroundColor: "#ffffff",
+            color: '#000000',
+            transform: 'scale(0.95)',
+        },
+        "& .MuiTypography-button": {
+            color: "#000000" /* also change color of nested Typography component */
+          },
     },
     button:{
         marginTop: '40px',
+        borderBottom: 'none',
     },
     cardGrid:{
         padding: '20px 0',
@@ -38,11 +51,12 @@ const useStyles = makeStyles((theme) => ({
         left: 0,
         right: 0,
         height: '50px',
+        position: "fixed",
         backgroundColor: '#f5f5f5',
         padding: '10px',
     },
     homepageBackground: {
-        backgroundColor: 'black',
+        backgroundColor:  '#000000 !important',
     },
     googleFont: {
         fontFamily: 'VT323 monospace', // use the font family name you got from Google Fonts
@@ -55,6 +69,11 @@ const useStyles = makeStyles((theme) => ({
         zIndex: 1,
         primary: '#ffffff',
         secondary: 'blue',
+    },
+    palette: {
+        primary: {
+            main: '#ffffff',
+        },
     },
 }));
 
