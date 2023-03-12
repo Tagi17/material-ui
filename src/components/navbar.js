@@ -1,24 +1,26 @@
 import { AppBar, Box, Button, Stack, Toolbar, Typography } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 
+import darkTheme from './styles'
 import enhexport from "./enhexport.png"
 import useStyles from './styles';
 
 const ResponsiveAppBar = () => {
   const classes = useStyles();
+  const theme = darkTheme();
   const navigate = useNavigate();
 
   const handleClickArt = () => navigate('/Art');
   const handleClickArticles = () => navigate('/Articles');
   const handleClickProjects = () => navigate('/Projects');
   const handleClickAbout = () => navigate('/About');
-  const handleClickHome = () => navigate('/Home');
+  const handleClickHome = () => navigate('/');
   
   return (
-    <AppBar position="sticky" color="primary">
-        <Toolbar >
-        <Box sx={{ display: 'flex', alignItems: 'center'}}>
-        <Link to="/Home" onClick={handleClickHome}>
+    <AppBar sx={{ backgroundColor: '#1A2228'  }} position="sticky">
+        <Toolbar  >
+        <Box className={classes.logo} sx={{ display: 'flex', alignItems: 'center'}}>
+        <Link to="/" onClick={handleClickHome}>
           <img src={enhexport} alt="Logo" sx={{marginRight: 1}}/>
         </Link>
         </Box>
