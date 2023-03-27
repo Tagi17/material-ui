@@ -30,7 +30,7 @@ const App = () => {
               <Route path="/About" element={<About/>} /> 
             </Routes>
 
-            <footer className={classes.footer}>
+            <footer className={classes.footer} >
                 <Typography variant="h6" align="center" gutterBottom>
                     Contact Me
                 </Typography>

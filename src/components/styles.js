@@ -1,5 +1,7 @@
 import {createTheme, makeStyles} from '@material-ui/core/styles';
 
+import { Card as MuiCard } from '@material-ui/core';
+
 //create a hook
 //open new objects for the classNames we created in the App.jsx file and add specific styles we want
 
@@ -14,11 +16,16 @@ const darkTheme = createTheme({
       },
       background: {
         paper: '#424242',
-        default: '#303030',
+        default: '#000000',
       },
       text: {
         primary: '#ffffff',
         secondary: '#b0bec5',
+      },
+      custom: {
+        color1: '#878683',
+        color2: '#4C4E52',
+        color3: '#6B6A69',
       },
     },
   });
@@ -27,11 +34,11 @@ const darkTheme = createTheme({
     ...darkTheme,
     components: {
       MuiAppBar: {
-        styleOverrides: {
+      
           root: {
             backgroundColor: '#708090',
           },
-        },
+       
       },
     },
       MuiBox: {
@@ -40,6 +47,12 @@ const darkTheme = createTheme({
             paddingTop: '25%',
             position: 'relative',
         },
+      },
+    },
+    MuiCard: {
+      root: {
+        background: "#424242",
+        color: "#ffffff",
       },
     },
   });
@@ -62,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#ffffff',
         textDecoration: 'none',
         "& button:hover": {
-            backgroundColor: "#ffffff",
+            backgroundColor: "#708090",
             color: '#000000',
             transform: 'scale(0.95)',
         },
@@ -110,11 +123,25 @@ const useStyles = makeStyles((theme) => ({
     myText:{
         fontFamily: 'VT323',
         fontSize: '2rem',
+        marginBottom: '0.5rem', 
     },
+    myText11:{
+      fontFamily: 'VT323',
+      fontSize: '1.6rem',
+      marginBottom: '0.5rem', 
+      marginTop: '3rem',
+      marginLeft: '5rem',
+      marginRight: '5rem',
+  },
     text1:{
         fontFamily: 'VT323',
-        
+        textAlign: 'center',
     },
+    text11:{
+      fontFamily: 'VT323',
+      textAlign: 'center',
+      //paddingTop: '300px',
+  },
     text: {
         zIndex: 1,
         //primary: '#ffffff',
@@ -123,8 +150,14 @@ const useStyles = makeStyles((theme) => ({
     centerText: {
         display: "flex",
         justifyContent: 'center',
-        paddingTop: '400px',
+        paddingTop: '300px',
         paddingLeft: '300px',
+    },
+    centerText1: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     mainContainer:{
         height: '100vh',
@@ -146,5 +179,5 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 //use classNames u want to style 
-export { darkTheme, theme, useStyles as default };
+export { darkTheme, theme, useStyles as default, MuiCard };
 

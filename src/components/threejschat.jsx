@@ -20,7 +20,8 @@ function ThreeScene() {
     //camera.position.z = 100;
     //camera.position.set(0, 0, 5);
     const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 10); // Adjusted the near and far values
-    camera.position.set(0, 0, 6); // Adjusted the camera position
+    camera.position.set(0, 0, 10); // Adjusted the camera position
+    
 
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(500, 500);
@@ -30,7 +31,7 @@ function ThreeScene() {
     const geometry = new THREE.SphereGeometry(3, 20, 32);
     const material = new THREE.MeshBasicMaterial({ wireframe: true });
     const sphere = new THREE.Mesh(geometry, material);
-    sphere.position.set(0, 0.5, 0);  // Move the sphere up  0, 1, 0
+    sphere.position.set(0, 1, 0);  // Move the sphere up  0, 1, 0
     scene.add(sphere);
 
     // Set up the lights

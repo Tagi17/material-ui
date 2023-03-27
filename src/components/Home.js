@@ -17,11 +17,11 @@ const Home = () => {
               <Box sx={{ backgroundColor: darkTheme.palette.background.paper }} className={classes.centerText}>
                 <Typography style={{ whiteSpace: 'nowrap' }} className={classes.text1} variant='h2'>Blockchain enthusiast</Typography>
               </Box>
-              <Typography className={classes.myText} variant="subtitle1" aligned="left">Front end Dev </Typography>
+              <Typography className={classes.myText} variant="subtitle1" style={{ marginLeft: '130px' }}>Front end Dev </Typography>
             </Grid>
             <Grid item xs={12} md={7}>
               <Box sx={{ position: 'relative', left: '-10%', backgroundColor: darkTheme.palette.background.paper }} className={classes.centerText}>
-                <ThreeScene />
+                <ThreeScene style={{ zindex: 200}}/>
               </Box>
             </Grid>
           </Grid>
