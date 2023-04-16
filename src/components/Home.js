@@ -1,9 +1,14 @@
+import "./style.css"
+
 import { AppBar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, CssBaseline, Grid, Spacing, Toolbar, Typography } from '@material-ui/core'; //components u will import from material UI
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import useStyles, { darkTheme } from './styles';
 
+import { Paper } from '@mui/material';
 import React from 'react';
 import ThreeScene from './threejschat';
+import glow from "./glow.png"
+import initThreeAnimation from './threejsnodes';
 
 const Home = () => {
     const classes = useStyles();
@@ -14,16 +19,23 @@ const Home = () => {
         <div className={classes.root} >     
           <Grid container wrap="nowrap" spacing={1}>
             <Grid item xs={12} md={5}>
-              <Box sx={{ backgroundColor: darkTheme.palette.background.paper }} className={classes.centerText}>
                 <Typography style={{ whiteSpace: 'nowrap' }} className={classes.text1} variant='h2'>Blockchain enthusiast</Typography>
-              </Box>
-              <Typography className={classes.myText} variant="subtitle1" style={{ marginLeft: '130px' }}>Front end Dev </Typography>
+              <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myText} >Front end Dev </Typography>
             </Grid>
             <Grid item xs={12} md={7}>
-              <Box sx={{ position: 'relative', left: '-10%', backgroundColor: darkTheme.palette.background.paper }} className={classes.centerText}>
-                <ThreeScene style={{ zindex: 200}}/>
-              </Box>
+              <div className = 'move' >
+                  <ThreeScene style={{ zindex: 200}}/>
+              </div>
             </Grid>
+          </Grid>
+          <Grid container wrap="nowrap" spacing={1} style={{ display: 'flex', alignItems: 'center' }}>
+            <Typography style={{ whiteSpace: 'nowrap', flexShrink: 0 }} className={classes.myTexttt} >About Me </Typography>
+              <br />
+              <div className={classes.glowImage}>
+                <img src={glow} alt="My PFP" />
+              </div>
+              <br />
+              <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myTextt} >About Me </Typography> 
           </Grid>
         </div>
       </ThemeProvider>

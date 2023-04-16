@@ -12,7 +12,7 @@ const About = () => {
         <CssBaseline /> 
             <div className={classes.centerText1}>
                 <Typography className={classes.myText11}>
-                    Hello, my name is Inzhagi. I am a front end dev focusing on Web3 integration
+                    Hello, my name is Inzhagi. I am a GWC Alumni, Vice President of the Blockchain Club, and a Front end Dev focusing on Web3 integration
                 </Typography>
                 <Typography  className={classes.myText11}>
                 I am a front-end developer with experience in shuttle tracker projects and a strong interest in web3.

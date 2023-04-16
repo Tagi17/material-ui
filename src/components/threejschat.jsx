@@ -86,8 +86,8 @@ function ThreeScene() {
         ref={containerRef}
         sx={{
           position: 'relative',
-          width: '50%',
-          height: '50%',
+          width: '80%',
+          height: '80%',
           top: '50px', // Adjust the top position as needed
           left: '50px', // Adjust the left position as needed
         }}

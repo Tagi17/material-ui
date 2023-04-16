@@ -34,7 +34,6 @@ const darkTheme = createTheme({
     ...darkTheme,
     components: {
       MuiAppBar: {
-      
           root: {
             backgroundColor: '#708090',
           },
@@ -80,11 +79,14 @@ const useStyles = makeStyles((theme) => ({
             transform: 'scale(0.95)',
         },
         "& .MuiTypography-button": {
-            color: "#000000" /* also change color of nested Typography component */
+            color: "#455e77" /* also change color of nested Typography component */
           },
     },
     root:{
         flexGrow: 1,
+        height: '100vh', // set the height to 100vh to make the page take up the full height of the viewport
+        overflowY: 'auto', // set overflowY to 'auto' to allow vertical scrolling overflowX: 'hidden'
+        overflowX: 'hidden',
     },
     button:{
         marginTop: '40px',
@@ -114,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
         right: 0,
         height: '50px',
         position: "fixed",
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#000000',
         padding: '10px',
     },
     googleFont: {
@@ -122,42 +124,71 @@ const useStyles = makeStyles((theme) => ({
     },
     myText:{
         fontFamily: 'VT323',
-        fontSize: '2rem',
+        fontSize: '3rem',
+        display: 'flex',
         marginBottom: '0.5rem', 
+        paddingLeft: '580px',
     },
-    myText11:{
+    myTexttt:{
       fontFamily: 'VT323',
-      fontSize: '1.6rem',
+      fontSize: '3rem',
+      display: 'flex',
       marginBottom: '0.5rem', 
-      marginTop: '3rem',
-      marginLeft: '5rem',
-      marginRight: '5rem',
+      paddingLeft: '580px',
+      marginTop: '180px',
   },
-    text1:{
+      myTextt:{
         fontFamily: 'VT323',
-        textAlign: 'center',
+        fontSize: '3rem',
+        display: 'flex',
+        marginBottom: '0.5rem', 
+        paddingLeft: '580px',
+        marginTop: '180px',
+    },
+      myText11:{
+        fontFamily: 'VT323',
+        fontSize: '1.6rem',
+        marginBottom: '0.5rem', 
+        marginTop: '3rem',
+        marginLeft: '5rem',
+        marginRight: '5rem',
+    },
+    text1:{
+      fontFamily: 'VT323',
+      textAlign: 'center',
+      justifyContent: 'center',
+      paddingTop: '210px',
+      paddingLeft: '450px',
     },
     text11:{
       fontFamily: 'VT323',
       textAlign: 'center',
       //paddingTop: '300px',
-  },
+    },
     text: {
         zIndex: 1,
-        //primary: '#ffffff',
         secondary: 'blue',
+    },
+    threeMove: {
+      marginTop: '-140px',
+      marginLeft: '-30%',
     },
     centerText: {
         display: "flex",
         justifyContent: 'center',
-        paddingTop: '300px',
-        paddingLeft: '300px',
+        paddingTop: '210px',
+        paddingLeft: '320px',
     },
     centerText1: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    glowImage:{
+      position: 'absolute',
+      top: '800px',
+      left: '1111px',
     },
     mainContainer:{
         height: '100vh',

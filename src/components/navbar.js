@@ -17,7 +17,7 @@ const ResponsiveAppBar = () => {
   const handleClickHome = () => navigate('/');
   
   return (
-    <AppBar sx={{ backgroundColor: '#1A2228'  }} position="sticky">
+    <AppBar sx={{backgroundColor: '#000000' }} position="sticky">
         <Toolbar  >
         <Box className={classes.logo} sx={{ display: 'flex', alignItems: 'center'}}>
         <Link to="/" onClick={handleClickHome}>
