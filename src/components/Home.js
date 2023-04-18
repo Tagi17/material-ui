@@ -28,14 +28,16 @@ const Home = () => {
               </div>
             </Grid>
           </Grid>
-          <Grid container wrap="nowrap" spacing={1} style={{ display: 'flex', alignItems: 'center' }}>
-            <Typography style={{ whiteSpace: 'nowrap', flexShrink: 0 }} className={classes.myTexttt} >About Me </Typography>
-              <br />
-              <div className={classes.glowImage}>
-                <img src={glow} alt="My PFP" />
-              </div>
-              <br />
-              <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myTextt} >About Me </Typography> 
+          <Grid container wrap="nowrap" spacing={1}>
+            <Grid item xs={12} md={5}>
+                <Typography style={{ whiteSpace: 'nowrap', flexShrink: 0 }} className={classes.myTexttt} >About Me </Typography>
+              <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myTextt} > My passion lies in designing and creating purposeful <br/> products that enhance user experience. I was introduced to <br/> the world of programming through Girls Who Code, which <br/> piqued my interest in the field. However, I was uncertain <br/> about which industry I wanted to specialize in until I <br/> discovered Bitcoin. The technology behind it fascinated me <br/> and opened up a new world of possibilities that I am eager <br/> to explore. </Typography> 
+          </Grid>
+          <Grid item xs={12} md={7}>
+            <div className={classes.glowImage}>
+              <img src={glow} alt="My PFP" />
+            </div>
+            </Grid>
           </Grid>
         </div>
       </ThemeProvider>

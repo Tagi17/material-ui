@@ -24,7 +24,7 @@ function ThreeScene() {
     
 
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(500, 500);
+    renderer.setSize(550, 550);
     containerRef.current.appendChild(renderer.domElement);
 
     // Set up the sphere

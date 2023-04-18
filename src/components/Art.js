@@ -30,7 +30,6 @@ const Art = () => {
                                 See my photos
                             </Button>
                         </Grid>
-                        
                     </Grid>
                 </div>
             </Container>

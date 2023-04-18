@@ -15,7 +15,7 @@ const About = () => {
                     Hello, my name is Inzhagi. I am a GWC Alumni, Vice President of the Blockchain Club, and a Front end Dev focusing on Web3 integration
                 </Typography>
                 <Typography  className={classes.myText11}>
-                I am a front-end developer with experience in shuttle tracker projects and a strong interest in web3.
+                I am a front-end developer with experience in shuttle tracker projects and a strong interest in Web3.
                 </Typography>
                 <Typography  className={classes.myText11}  style={{ textAlign: 'center' }}>
                 I am also an active member of a blockchain club and enjoy creating pixel art in my free time. <br /> I am excited to bring my skills and passion to a dynamic team

@@ -84,9 +84,8 @@ const useStyles = makeStyles((theme) => ({
     },
     root:{
         flexGrow: 1,
-        height: '100vh', // set the height to 100vh to make the page take up the full height of the viewport
-        overflowY: 'auto', // set overflowY to 'auto' to allow vertical scrolling overflowX: 'hidden'
-        overflowX: 'hidden',
+        maxHeight: '100vh', // set the height to 100vh to make the page take up the full height of the viewport
+  
     },
     button:{
         marginTop: '40px',
@@ -102,15 +101,18 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
+        fontFamily: 'VT323',
     },
     cardMedia:{
         height: 0,
         paddingTop: '56.25%',
+        fontFamily: 'VT323',
     },
     cardContent:{
         flexGrow: 1,
+        fontFamily: 'VT323',
     },
-    footer: {
+    footer:{
         bottom: 0,
         left: 0,
         right: 0,
@@ -118,9 +120,10 @@ const useStyles = makeStyles((theme) => ({
         position: "fixed",
         backgroundColor: '#000000',
         padding: '10px',
+        fontFamily: 'VT323',
     },
     googleFont: {
-        fontFamily: 'VT323 monospace', // use the font family name you got from Google Fonts
+        fontFamily: 'VT323', // use the font family name you got from Google Fonts
     },
     myText:{
         fontFamily: 'VT323',
@@ -134,16 +137,16 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '3rem',
       display: 'flex',
       marginBottom: '0.5rem', 
-      paddingLeft: '580px',
-      marginTop: '180px',
+      paddingLeft: '450px',
+      marginTop: '120px',
   },
       myTextt:{
         fontFamily: 'VT323',
-        fontSize: '3rem',
+        fontSize: '2.4rem',
         display: 'flex',
-        marginBottom: '0.5rem', 
-        paddingLeft: '580px',
-        marginTop: '180px',
+        marginBottom: '100px', 
+        paddingLeft: '130px',
+        marginTop: '30px',
     },
       myText11:{
         fontFamily: 'VT323',
@@ -172,6 +175,20 @@ const useStyles = makeStyles((theme) => ({
     threeMove: {
       marginTop: '-140px',
       marginLeft: '-30%',
+    },
+    title:{
+      fontFamily: 'VT323',
+    },
+    media:{
+      fontFamily: 'VT323',
+      maxWidth: '900px',
+      margin: 'auto', // Center the card horizontally
+      display: 'flex',
+      flexDirection: 'column', 
+      marginTop: '100px',
+      height: 'auto',
+      
+      
     },
     centerText: {
         display: "flex",

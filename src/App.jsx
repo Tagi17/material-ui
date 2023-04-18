@@ -31,7 +31,7 @@ const App = () => {
             </Routes>
 
             <footer className={classes.footer} >
-                <Typography variant="h6" align="center" gutterBottom>
+                <Typography className={classes.googleFont} variant="h6" align="center" gutterBottom>
                     Contact Me
                 </Typography>
                 <Typography>
