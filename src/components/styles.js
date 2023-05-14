@@ -59,11 +59,14 @@ const darkTheme = createTheme({
 
 const useStyles = makeStyles((theme) => ({
 
-    container:{
-        //backgroundColor: theme.palette.background.paper,
-        //backgroundColor: '#708090',
-        //padding: theme.spacing(8, 0, 6),
-    },
+    arrowContainer: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      marginTop: theme.spacing(1),
+  },
+    arrowButton: {
+      color: theme.palette.secondary.main,
+  },
     buttons:{
         justifyContent:"center",
         display: 'flex',
@@ -97,10 +100,23 @@ const useStyles = makeStyles((theme) => ({
     cardGrid:{
         padding: '20px 0',
     },
+    cardGrid1:{
+      width: '100vw',
+      height: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: theme.spacing(4),
+    },
     card:{
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
+        fontFamily: 'VT323',
+    },
+    card1:{
+        height: '100%',
+        display: 'flex',
         fontFamily: 'VT323',
     },
     cardMedia:{
@@ -108,6 +124,11 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '56.25%',
         fontFamily: 'VT323',
     },
+    cardMedia1:{
+      height: 'auto',
+      paddingTop: '56.25%',
+      fontFamily: 'VT323',
+  },
     cardContent:{
         flexGrow: 1,
         fontFamily: 'VT323',
@@ -144,7 +165,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'VT323',
         fontSize: '2.4rem',
         display: 'flex',
-        marginBottom: '100px', 
+        marginBottom: '200px', 
         paddingLeft: '130px',
         marginTop: '30px',
     },

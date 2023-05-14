@@ -1,12 +1,12 @@
 import { AppBar, Box, Button, Card, CardActions, CardContent, CardMedia, Container, CssBaseline, Grid, Spacing, Toolbar, Typography } from '@material-ui/core'; //components u will import from material UI
-import { BrowserRouter, Link, Route, Routes, Switch } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes, Switch, useLocation } from "react-router-dom";
+import React, { useEffect } from 'react';
 
 import About from "./components/About";
 import Art from './components/Art';
 import Articles from "./components/Articles";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
-import React from 'react';
 import ResponsiveAppBar from './components/navbar';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './components/theme';
@@ -15,6 +15,11 @@ import useStyles from './components/styles';
 //create functional component
 const App = () => {
     const classes = useStyles(); //call useStyles as a function from styles.js
+    const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
  
     return (
         <>
