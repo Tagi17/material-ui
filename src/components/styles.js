@@ -88,7 +88,35 @@ const useStyles = makeStyles((theme) => ({
     root:{
         flexGrow: 1,
         maxHeight: '100vh', // set the height to 100vh to make the page take up the full height of the viewport
-  
+        //overflow: 'hidden',
+    },
+    gridCenter: {
+      display: 'flex',
+    
+      marginTop: '10vh',
+      justifyContent: 'center', // Center horizontally
+      minHeight: '100vh', 
+    },
+    textG: {
+      [theme.breakpoints.up('md')]: {
+        paddingRight: theme.spacing(2), // Add spacing between text and image on larger screens
+      },
+    },
+    imageG: {
+      maxWidth: '100%',        // Make the image responsive
+      display: 'block',   
+      justifyContent: 'center',     // Remove extra space below the image
+      marginLeft: 'auto',      // Center the image horizontally
+      marginRight: 'auto',     // Center the image horizontally
+    },
+    glowImage:{
+      [theme.breakpoints.down('md')]: {
+        marginTop: theme.spacing(2), 
+      },
+    },
+    content:{
+      padding: '20px', /* Adjust the padding as needed */
+      margin: '-20px', 
     },
     button:{
         marginTop: '40px',
@@ -151,7 +179,11 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '3rem',
         display: 'flex',
         marginBottom: '0.5rem', 
+        marginTop: '40px',
         paddingLeft: '580px',
+        [theme.breakpoints.down('md')]: {
+          textAlign: 'center', 
+        },
     },
     myTexttt:{
       fontFamily: 'VT323',
@@ -222,11 +254,21 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      
     },
-    glowImage:{
-      position: 'absolute',
-      top: '800px',
-      left: '1111px',
+    pushRight:{
+      marginLeft: ' 70px',
+    },
+    gridItem:{
+      minWidth: 0,
+      flexShrink: 0,
+      paddingRight: theme.spacing(1),
+    },
+    gridContainer:{
+      display: 'flex',
+      flexWrap: 'nowrap',
+      overflowX: 'auto',
+      marginBottom: theme.spacing(1),
     },
     mainContainer:{
         height: '100vh',

@@ -3,27 +3,35 @@ import {ThemeProvider, createTheme} from '@mui/material/styles';
 import useStyles, { darkTheme } from './styles';
 
 import React from 'react';
+import glow from "./glow.png"
 
 const About = () => {
     const classes = useStyles(); 
     
     return (
         <ThemeProvider theme={darkTheme}> 
-        <CssBaseline /> 
-            <div className={classes.centerText1}>
-                <Typography className={classes.myText11}>
-                    Hello, my name is Inzhagi. I am a GWC Alumni, Vice President of the Blockchain Club, and a Front end Dev focusing on Web3 integration
-                </Typography>
-                <Typography  className={classes.myText11}>
-                I am a front-end developer with experience in shuttle tracker projects and a strong interest in Web3.
-                </Typography>
-                <Typography  className={classes.myText11}  style={{ textAlign: 'center' }}>
-                I am also an active member of a blockchain club and enjoy creating pixel art in my free time. <br /> I am excited to bring my skills and passion to a dynamic team
-                </Typography>
-                <Typography  className={classes.myText11}>
-                Check out my art here
-                </Typography>
-            </div>
+         <CssBaseline /> 
+
+                <Grid container className={classes.gridCenter} justifyContent='center'>
+                    <Grid item xs={12} md={6} className={classes.textG}>
+                        <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myTextt}> 
+                            My passion lies in designing and creating purposeful <br />
+                            products that enhance user experience. I was introduced to <br />
+                            the world of programming through Girls Who Code, which <br />
+                            piqued my interest in the field. However, I was uncertain <br />
+                            about which industry I wanted to specialize in until I <br />
+                            discovered Bitcoin. The technology behind it fascinated me <br />
+                            and opened up a new world of possibilities that I am eager <br />
+                            to explore. 
+                        </Typography> 
+                    </Grid>
+                    <Grid item xs={6} md={6}>
+                        <div className={classes.imageG}>
+                            <img src={glow} alt="My PFP" />
+                        </div>
+                    </Grid>
+                </Grid>
+         
         </ThemeProvider>
     )
 };

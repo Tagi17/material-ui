@@ -55,7 +55,7 @@ const Articles = () => {
     return(
       <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <div className={classes.root1}>
+      <div className={classes.root1} style={{ overflow: 'hidden' }}>
         <Grid container spacing={1} alignItems='center' justifyContent='center' style={{overflow: 'hidden' }} >
         {activeCardIndex > 0 ? (
         <Grid item>

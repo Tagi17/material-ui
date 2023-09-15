@@ -14,6 +14,7 @@ const ResponsiveAppBar = () => {
   const handleClickArticles = () => navigate('/Articles');
   const handleClickProjects = () => navigate('/Projects');
   const handleClickAbout = () => navigate('/About');
+  const handleClickContact = () => navigate('/Contact');
   const handleClickHome = () => navigate('/');
   
   return (
@@ -26,11 +27,11 @@ const ResponsiveAppBar = () => {
         </Box>
         <div className={classes.buttons} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
         <Stack direction="row" spacing={4} sx={{ display: 'flex', alignItems: 'center' }}>
-          <Button size="large" variant="text" onClick={handleClickArt} sx={{ textDecoration: 'none', borderBottom: 'none'}}>
+          {/* <Button size="large" variant="text" onClick={handleClickArt} sx={{ textDecoration: 'none', borderBottom: 'none'}}>
             <Link to="/Art" style={{ textDecoration: 'none'}}>
             <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>Art</Typography>
             </Link>
-          </Button>
+          </Button> */}
           <Button size="large" variant="text" onClick={handleClickArticles}>
             <Link to="/Articles" style={{ textDecoration: 'none'}} >
             <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>Articles</Typography>
@@ -44,6 +45,11 @@ const ResponsiveAppBar = () => {
           <Button size="large" variant="text" onClick={handleClickAbout}>
             <Link to="/About" style={{ textDecoration: 'none'}} >
             <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>About</Typography>
+            </Link >
+          </Button>
+          <Button size="large" variant="text" onClick={handleClickContact}>
+            <Link to="/Contact" style={{ textDecoration: 'none'}} >
+            <Typography variant="button" sx={{ fontFamily: 'VT323', fontSize: '2.5rem' }}>Contact</Typography>
             </Link >
           </Button>
           </Stack>

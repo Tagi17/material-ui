@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import About from "./components/About";
 import Art from './components/Art';
 import Articles from "./components/Articles";
+import Contact from './components/Contact';
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import ResponsiveAppBar from './components/navbar';
@@ -33,9 +34,10 @@ const App = () => {
               <Route path="/Articles" element={<Articles/>} />
               <Route path="/Projects" element={<Projects/>} />
               <Route path="/About" element={<About/>} /> 
+              <Route path="/Contact" element={<Contact/>} /> 
             </Routes>
 
-            <footer className={classes.footer} >
+            {/* <footer className={classes.footer} >
                 <Typography className={classes.googleFont} variant="h6" align="center" gutterBottom>
                     Contact Me
                 </Typography>
@@ -45,7 +47,7 @@ const App = () => {
                 <Typography variant="subtitle1" align="center" color="textSecondary">
                      Inz Inc 2023
                 </Typography>
-            </footer>
+            </footer> */}
             </div>
         </ThemeProvider>
         </>

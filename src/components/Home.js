@@ -17,28 +17,28 @@ const Home = () => {
         <ThemeProvider theme={darkTheme}> 
         <CssBaseline /> 
         <div className={classes.root} >     
-          <Grid container wrap="nowrap" spacing={1}>
-            <Grid item xs={12} md={5}>
-                <Typography style={{ whiteSpace: 'nowrap' }} className={classes.text1} variant='h2'>Blockchain enthusiast</Typography>
-              <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myText} >Front end Dev </Typography>
+            <Grid container wrap="nowrap" >
+              <Grid item xs={12} md={6}>
+                  <Typography style={{ whiteSpace: 'nowrap' }} className={classes.text1} variant='h2'>Blockchain enthusiast</Typography>
+                <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myText} >Front end Dev </Typography>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <div className = 'move' >
+                    <ThreeScene style={{ zindex: 200}}/>
+                </div>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={7}>
-              <div className = 'move' >
-                  <ThreeScene style={{ zindex: 200}}/>
+            {/* <Grid container wrap="nowrap" >
+              <Grid item xs={12} md={6}>
+                  <Typography style={{ whiteSpace: 'nowrap', flexShrink: 0 }} className={classes.myTexttt} >About Me </Typography>
+                <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myTextt} > My passion lies in designing and creating purposeful <br/> products that enhance user experience. I was introduced to <br/> the world of programming through Girls Who Code, which <br/> piqued my interest in the field. However, I was uncertain <br/> about which industry I wanted to specialize in until I <br/> discovered Bitcoin. The technology behind it fascinated me <br/> and opened up a new world of possibilities that I am eager <br/> to explore. </Typography> 
+            </Grid>
+            <Grid item xs={6} md={6}>
+              <div className={classes.glowImage}>
+                <img src={glow} alt="My PFP" />
               </div>
-            </Grid>
-          </Grid>
-          <Grid container wrap="nowrap" spacing={1}>
-            <Grid item xs={12} md={5}>
-                <Typography style={{ whiteSpace: 'nowrap', flexShrink: 0 }} className={classes.myTexttt} >About Me </Typography>
-              <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myTextt} > My passion lies in designing and creating purposeful <br/> products that enhance user experience. I was introduced to <br/> the world of programming through Girls Who Code, which <br/> piqued my interest in the field. However, I was uncertain <br/> about which industry I wanted to specialize in until I <br/> discovered Bitcoin. The technology behind it fascinated me <br/> and opened up a new world of possibilities that I am eager <br/> to explore. </Typography> 
-          </Grid>
-          <Grid item xs={12} md={7}>
-            <div className={classes.glowImage}>
-              <img src={glow} alt="My PFP" />
-            </div>
-            </Grid>
-          </Grid>
+              </Grid>
+            </Grid> */}
         </div>
       </ThemeProvider>
     )

@@ -5,7 +5,7 @@ import useStyles, { darkTheme } from './styles';
 
 import React from 'react';
 
-const cards = [ 1,2,3,4,5,6,7,8,9]
+const cards = [1,2,3,4,5,6,7,8,9]
 
 const Art = () => {
     const classes = useStyles(); //call useStyles as a function from styles.js
