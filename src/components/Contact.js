@@ -10,6 +10,9 @@ const Contact = () => {
     return (
         <ThemeProvider theme={darkTheme}> 
         <CssBaseline /> 
+        <Typography className={classes.myTextW}>
+           Reach out to me at my email: inzhagey@gmail.com 
+        </Typography>
         </ThemeProvider>
     )
 };

@@ -92,12 +92,20 @@ const useStyles = makeStyles((theme) => ({
     },
     gridCenter: {
       display: 'flex',
-    
-      marginTop: '10vh',
       justifyContent: 'center', // Center horizontally
-      minHeight: '100vh', 
     },
     textG: {
+      marginTop: '10vh', 
+
+  [theme.breakpoints.up('sm')]: {
+    // Margin for screens wider than 600px
+    marginTop: '20px', 
+  },
+
+  [theme.breakpoints.up('md')]: {
+    // Margin for screens wider than 960px
+    marginTop: '30px', 
+  },
       [theme.breakpoints.up('md')]: {
         paddingRight: theme.spacing(2), // Add spacing between text and image on larger screens
       },
@@ -105,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
     imageG: {
       maxWidth: '100%',        // Make the image responsive
       display: 'block',   
-      justifyContent: 'center',     // Remove extra space below the image
+      // justifyContent: 'center',     // Remove extra space below the image
       marginLeft: 'auto',      // Center the image horizontally
       marginRight: 'auto',     // Center the image horizontally
     },
@@ -185,6 +193,16 @@ const useStyles = makeStyles((theme) => ({
           textAlign: 'center', 
         },
     },
+    myTextW:{
+        fontFamily: 'VT323',
+        fontSize: '3rem',
+        display: 'flex',
+        marginTop: '10vh',
+        marginLeft: '65vh',
+        [theme.breakpoints.down('md')]: {
+          textAlign: 'center', 
+        },
+    },
     myTexttt:{
       fontFamily: 'VT323',
       fontSize: '3rem',
@@ -197,9 +215,12 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'VT323',
         fontSize: '2.4rem',
         display: 'flex',
-        marginBottom: '200px', 
-        paddingLeft: '130px',
-        marginTop: '30px',
+        marginLeft: 'auto', 
+        paddingLeft: '160px',
+        
+        [theme.breakpoints.down('sm')]: {
+          fontSize: '1.8rem', // Adjust font size for smaller screens
+        },
     },
       myText11:{
         fontFamily: 'VT323',
@@ -208,6 +229,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '3rem',
         marginLeft: '5rem',
         marginRight: '5rem',
+    },
+    mySmolText:{
+      fontFamily: 'VT323',
+      fontSize: '1.6rem',
     },
     text1:{
       fontFamily: 'VT323',

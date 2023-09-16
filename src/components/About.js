@@ -11,10 +11,9 @@ const About = () => {
     return (
         <ThemeProvider theme={darkTheme}> 
          <CssBaseline /> 
-
-                <Grid container className={classes.gridCenter} justifyContent='center'>
-                    <Grid item xs={12} md={6} className={classes.textG}>
-                        <Typography style={{ whiteSpace: 'nowrap' }} className={classes.myTextt}> 
+                <Grid container className={classes.gridCenter} justifyContent='center' alignItems='center'>
+                    <Grid item xs={12} md={6} className={classes.textG} >
+                        <Typography  className={classes.myTextt}> 
                             My passion lies in designing and creating purposeful <br />
                             products that enhance user experience. I was introduced to <br />
                             the world of programming through Girls Who Code, which <br />
@@ -31,7 +30,6 @@ const About = () => {
                         </div>
                     </Grid>
                 </Grid>
-         
         </ThemeProvider>
     )
 };
