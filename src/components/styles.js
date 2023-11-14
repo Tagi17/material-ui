@@ -44,7 +44,7 @@ const darkTheme = createTheme({
         styleOverrides: {
           root: {
             paddingTop: '25%',
-            position: 'relative',
+            // position: 'relative',
         },
       },
     },
@@ -85,14 +85,35 @@ const useStyles = makeStyles((theme) => ({
             color: "#455e77" /* also change color of nested Typography component */
           },
     },
+    animationContainer: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 0,
+    },
+    root1:{
+      display: 'flex',
+      justifyContent: 'center', 
+      paddingTop: '30px',
+      height: '100vh',
+      textAlign: 'center',
+    },
     root:{
-        flexGrow: 1,
-        maxHeight: '100vh', // set the height to 100vh to make the page take up the full height of the viewport
-        //overflow: 'hidden',
+      // flexGrow: 1,
+      // maxHeight: '100vh', // set the height to 100vh to make the page take up the full height of the viewport
+      backgroundImage: 'linear-gradient(to bottom, #000000, #000044)',
+      transition: 'background-color 4s ease-in-out', // Transition effect over 4 seconds
+      '&:hover': {
+        backgroundColor: '#000022', // Darker blue on hover
+      },
+      //overflow: 'hidden',
     },
     gridCenter: {
       display: 'flex',
       justifyContent: 'center', // Center horizontally
+      
     },
     textG: {
       marginTop: '10vh', 
@@ -132,6 +153,7 @@ const useStyles = makeStyles((theme) => ({
     },
     logo:{
         transform: 'scale(0.95)',
+        marginLeft: '260px',
     },
     cardGrid:{
         padding: '20px 0',
@@ -189,6 +211,13 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '0.5rem', 
         marginTop: '40px',
         paddingLeft: '580px',
+        [theme.breakpoints.down('md')]: {
+          textAlign: 'center', 
+        },
+    },
+    myTexty:{
+        fontFamily: 'VT323',
+        fontSize: '2.5rem',
         [theme.breakpoints.down('md')]: {
           textAlign: 'center', 
         },
@@ -311,7 +340,12 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       height: '100%',
     },
-    
+    canvasContainer: {
+      width: '400px', /* Set your desired width */
+      height: '400px', /* Set your desired height */
+      position: 'relative', /* To control the position */
+      /* Add any other styling you need */
+    },
 }));
 
 //use classNames u want to style 

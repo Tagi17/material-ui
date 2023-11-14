@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import About from "./components/About";
 import Art from './components/Art';
 import Articles from "./components/Articles";
+import { Canvas } from '@react-three/fiber';
 import Contact from './components/Contact';
 import Home from "./components/Home";
 import Projects from "./components/Projects";
@@ -36,7 +37,7 @@ const App = () => {
               <Route path="/About" element={<About/>} /> 
               <Route path="/Contact" element={<Contact/>} /> 
             </Routes>
-
+       
             {/* <footer className={classes.footer} >
                 <Typography className={classes.googleFont} variant="h6" align="center" gutterBottom>
                     Contact Me

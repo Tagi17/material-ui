@@ -2,3 +2,7 @@
     margin-top: 90px;
     margin-left: 15%;
 }
+body, html {
+    margin: 0;
+    padding: 0;
+  }
